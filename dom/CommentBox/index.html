@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Add Your Comment here</h1>
+   <div id="comment-container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, architecto recusandae quibusdam fugiat doloremque expedita qui accusantium. Reiciendis est repudiandae impedit accusantium animi blanditiis nesciunt.</p>
+    <p>Sed fuga aut ipsum molestias qui a dicta, eligendi aperiam! Quibusdam nobis qui neque incidunt, repellendus, labore velit illum dignissimos, cumque ducimus adipisci architecto laboriosam.</p>
+    <p>Maiores tenetur rerum atque dolore? At aut architecto dolorum laboriosam repellendus, est vero quia earum blanditiis eveniet amet, dolorem tempora minima! Facilis, architecto. A, necessitatibus!</p>
+   </div>
+
+    <div>
+        <textarea name="" id="new-comment" cols="50" placeholder="Write your comment" rows="20"></textarea> <br>
+
+        <button onclick="commentHandler()">Comments</button>
+    </div>
+
+
+
+
+    <script>
+        function commentHandler () {
+            const newComment=document.getElementById("new-comment");
+           
+           const commentContainer =document.getElementById("comment-container");
+           
+            const p=document.createElement('p')
+            p.innerText=newComment.value;
+            commentContainer.appendChild(p)
+            p.style.color="red"
+            newComment.value=" "
+
+        }
+
+    </script>
+</body>
+</html>
